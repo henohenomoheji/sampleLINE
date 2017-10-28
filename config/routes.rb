@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'chat#show'
+  devise_for :users
+  root to: 'chat#index'
+  #get 'chat#login_check'
   
   #get 'chat/show'
 

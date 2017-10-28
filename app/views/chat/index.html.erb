@@ -1,0 +1,10 @@
+
+
+<h1>ログイン完了</h1>
+<h1><%= @user.email %></h1>
+<p><%= @msg %></p>
+
+<hr>
+
+<div><%=link_to 'Sign out&gt;&gt'.html_safe,destroy_user_session_path,method: :delete %></div>
+
