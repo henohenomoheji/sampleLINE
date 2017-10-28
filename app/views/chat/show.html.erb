@@ -9,7 +9,10 @@
 
 <input type="button" data-behavior="chat_input" value="Submit">
 
-<h5>Received Messages</h5>
+<h5>Received Messages</h5> 
+<% @message.each do |m|%>
+<p><%= m.body %></p>
+<% end %>
 <ul id="messages">
 </ul>
 
