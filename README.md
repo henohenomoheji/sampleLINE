@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##課題　『LINE』を作る
 
-Things you may want to cover:
+###はじめに
+今回、「LINE」を作るといった課題において、オープンソースのWebアプリケーションフレームワーク「Ruby on Rails」を使うことにした。今回の課題は１対１でメッセージを送りあることのできるアプリケーションを作成するということで、Action CableとういうWebSocketとRailsのその他の部分をシームレスに統合するためのものを使用することにする。
 
-* Ruby version
+###実行環境
 
-* System dependencies
+* ruby 2.4.1
 
-* Configuration
+* Rails 5.1.4
 
-* Database creation
+* Database:MySQL(開発環境),postresql(本番環境)
 
-* Database initialization
+* jQuery
 
-* How to run the test suite
+###アプリケーションの操作
+1. ログイン画面においてログイン
+2. サインアップした後、『LINE』の表記をクリック
+3. チャットルームに行くことができ、メッセージを送ることができる
 
-* Services (job queues, cache servers, search engines, etc.)
+###アプリケーションの構成
 
-* Deployment instructions
+**概要**
 
-* ...
+出版側はまず、ルートを通って、コントロール、そしてビューにアクセスし、メッセージを送信、そのメッセージはチャネルを通して、出版側と購読者に送られる。
+
+
+
+[構図]
+
+![](ActionCable.png)
+
+[モデル図]
+
+* User:ログインしたユーザの情報
+* Message:メッセージを送る側のメールアドレスとメッセージ
+
+![](ActionCableModel.png)
+
+
+
