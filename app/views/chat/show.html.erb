@@ -1,54 +1,31 @@
-<h1>Chat</h1>
+<center>
 
-<h2><%= @users %>
+<div class="balloon3-right-btm">
+LINE
+</div>
 
 
 
-<br>
-<label>Name:</label>
-<input type="text" id="name_form" value="<%= @users %>">
-<br>
-<label>Message:</label>
-<input type="text" id="message_form" value="">
-<br>
+</center>
 
-<input type="button" data-behavior="chat_input" value="Submit">
-
-<h5>Received Messages</h5> 
+<div>メッセージ履歴</div> 
+<center>
 <% @message.each do |m|%>
-<p><%= m.body %></p>
+    <ul><%= m.name %>:<%= m.body %></ul>
+    
 <% end %>
+<ul id="name">
+</ul>
 <ul id="messages">
 </ul>
+</center>
 
-<!--左からの吹き出し-->
-<div class="kaiwa">
- <figure class="kaiwa-img-left">
- <%= image_tag 'Mike.png',:size =>'100x100'%>
- <figcaption class="kaiwa-img-description">
-     にゃー
- </figcaption>
- </figure>
- <div class="kaiwa-text-right">
-   <p class="kaiwa-text">
-   <ul id="messages">
-   </ul>
-   </p>
-   </div>
-</div>
 
-<!--右からの吹き出し-->
-<div class="kaiwa">
- <figure class="kaiwa-img-right">
-   <%= image_tag 'ミニオンズ.png',:size =>'100x100'%>
 
- <figcaption class="kaiwa-img-description">
-     にゃー
- </figcaption>
- </figure>
- <div class="kaiwa-text-left">
-   <p class="kaiwa-text">
-     にゃー！にゃー！にゃー！にゃー！にゃー！にゃー！にゃー！にゃー！
-   </p>
- </div>
-</div>
+<center>
+<label>ユーザー:</label>
+<input type="text" id="name_form" value="<%= @users %>">
+<br>
+<label>メッセージ:</label>
+<input type="text" id="message_form" value="" size="100"><input type="button" data-behavior="chat_input" value="送信" >
+</center>

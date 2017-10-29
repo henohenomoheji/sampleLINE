@@ -5,7 +5,11 @@
 <p><%= @msg %></p>
 
 <hr>
+<h2><%=link_to "LINE", chat_show_path%></h2>
 
-<div><%=link_to 'Sign out&gt;&gt'.html_safe,destroy_account_session_path,method: :delete %></div>
+<hr>
+
+<div><%=link_to 'Sign out&gt;&gt'.html_safe,destroy_user_session_path,method: :delete %></div>
+
 
 

@@ -7,7 +7,8 @@
 　
 　#購読者が受け取るdata
   received: (data) ->
-   $('#messages').append('<p>'+data["name"]+': '+data["message"]+'</p>')
+   $('p').append('<p>'+data["message"]+'</p>')
+   $('#name').append('<p>'+data["name"]+'</p>')
    #$('#messages').append('<p>'+data["message"]+'</p>')
     # Called when there's incoming data on the websocket for this channel
    #if (data["message"] isnt "" ) then 
@@ -20,7 +21,7 @@
     nameForm = $('#name_form')
     messageForm = $('#message_form')
     App.chat.speak nameForm.val(),messageForm.val()
-    nameForm.val('')
+    
     messageForm.val('')
 
   #$(document).on 'keypress', '[data-behavior~=caht_input]', (event) ->

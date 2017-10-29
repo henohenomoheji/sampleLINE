@@ -1,13 +1,21 @@
-
-
-<h1>ログイン完了</h1>
-<h1><%= @user.email %></h1>
-<p><%= @msg %></p>
-
-<hr>
-<h2><%=link_to "LINE", chat_show_url%></h2>
+<center>
+<h2>ログイン完了</h2>
+</center>
+<div align="right"><%= @user.email %>さん、こんにちは！</div>
+<div align="right"><%= @msg %></div>
 
 <hr>
+<center>
+
+<div class="balloon3-right-btm">
+<%=link_to "LINE", chat_show_path%>
+</div>
+</center>
+
+
+
 
 <div><%=link_to 'Sign out&gt;&gt'.html_safe,destroy_user_session_path,method: :delete %></div>
+
+
 
