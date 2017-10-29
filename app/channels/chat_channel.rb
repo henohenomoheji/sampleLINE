@@ -12,7 +12,7 @@ class ChatChannel < ApplicationCable::Channel
   # chatチャンネルのspeakメソッドは、受け取ったメッセージを全クライアントにブロードキャストする
   def speak(data)
     Message.create! body:data['message']
-    ActionCable.server.broadcast 'chat_channel', data
+    ActionCable.server.broadcast 'chat_channel', {name: data["name"], message: data["message"]}
     
   end
 end
