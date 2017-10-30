@@ -11,7 +11,7 @@ LINE
 <% @message.each do |m|%>
     
     
-    <ul><%= m.name %>:<%= m.body %>:<%=link_to '×', chat_url(m.id) ,method: :delete, data: {confirm:"Are you sure?"} %></ul>
+<ul><%= m.name %>:<%= m.body %>:<%=link_to '×', chat_url(m.id) ,method: :delete, data: {confirm:"Are you sure?"} %></ul>
 <% end %>
 <ul id="messages"></ul>
 </center>
