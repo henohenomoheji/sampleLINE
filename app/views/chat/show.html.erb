@@ -1,31 +1,26 @@
-<center>
 
+<center>
 <div class="balloon3-right-btm">
 LINE
 </div>
-
-
-
 </center>
+
 
 <div>メッセージ履歴</div> 
 <center>
 <% @message.each do |m|%>
-    <ul><%= m.name %>:<%= m.body %></ul>
     
+    
+    <ul><%= m.name %>:<%= m.body %>:<%=link_to '×', chat_url(m.id) ,method: :delete, data: {confirm:"Are you sure?"} %></ul>
 <% end %>
-<ul id="name">
-</ul>
-<ul id="messages">
-</ul>
+<ul id="messages"></ul>
 </center>
 
 
 
-<center>
-<label>ユーザー:</label>
-<input type="text" id="name_form" value="<%= @users %>">
-<br>
-<label>メッセージ:</label>
-<input type="text" id="message_form" value="" size="100"><input type="button" data-behavior="chat_input" value="送信" >
-</center>
+<table>
+<tr><th>ユーザー</th>
+<th><input type="text" id="name_form" value="<%= @users %>"></th>
+<th>メッセージ</th>
+<th><input type="text" id="message_form" value="" size="80"><input type="button" data-behavior="chat_input" value="送信" ></th>
+</tr></table>

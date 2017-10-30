@@ -7,11 +7,11 @@
 　
 　#購読者が受け取るdata
   received: (data) ->
-   $('p').append('<p>'+data["message"]+'</p>')
-   $('#name').append('<p>'+data["name"]+'</p>')
-   #$('#messages').append('<p>'+data["message"]+'</p>')
+   
+   #$('#name').append('<p>'+data["name"]+'</p>')
+   $('#messages').append('<p>'+data["name"]+":"+data["message"]+'</p>')
     # Called when there's incoming data on the websocket for this channel
-   #if (data["message"] isnt "" ) then 
+   
   # speakメソッドでメッセージを要求
   speak: (name,message) ->
     @perform 'speak',name: name,message: message
