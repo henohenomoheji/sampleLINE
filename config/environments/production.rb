@@ -22,7 +22,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  Rails.application.config.action_cable.allowed_request_origins = 'https://git.heroku.com/sampleline2017.git'
+ 
   
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
